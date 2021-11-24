@@ -14,10 +14,6 @@ const AddProduct = (props) => {
     formState: { errors }
   } = useForm();
   let navigate = useNavigate();
-  const [products, setProducts] = useState({});
-  
-
-  
   const onSubmit = async (data) => {
  
         await UploadImage(data.image[0]).then((response) => {

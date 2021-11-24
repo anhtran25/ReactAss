@@ -4,7 +4,7 @@ const ShowList = ({products, onRemove}) => {
     return(
         products.map(data => {
             return (
-                <tr key={data.id}>
+                <tr >
                     <th scope="row">{data.id}</th>
                     <td><h5>{data.name}</h5></td>
                     <td><img width={200} height={200} src={data.image}/></td>

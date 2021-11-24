@@ -18,6 +18,7 @@ import Category from "./admin/category/Category";
 import AddCategory from "./admin/category/AddCategory";
 import EditCategory from "./admin/category/EditCategory";
 import AddProduct from "./admin/AddProduct";
+import PrivateAdmin from "./components/PrivateAdmin";
 
 
 
@@ -76,7 +77,10 @@ export default function App() {
           </Route>
           
          
-          <Route path="admin/*" element={<LayoutAdmin />}>
+          <Route path="admin/*" element={
+          <PrivateAdmin abc="123">
+          <LayoutAdmin />
+          </PrivateAdmin>}>
             <Route index element={<Navigate to="products" />} />
             <Route path="products" element={<IndexProduct />} />
             <Route path="products/add" element={<AddProduct onAdd={onHandleAdd} />}/>

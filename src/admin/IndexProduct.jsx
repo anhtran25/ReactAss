@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 // import Data from '../data/Data';
 import {useEffect, useState} from "react";
 import ShowList from './ShowList';

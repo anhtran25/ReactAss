@@ -1,11 +1,11 @@
 
-export const authenticate = (user) => {
-    localStorage.setItem("user", JSON.stringify(user));
+export const authenticate = (users) => {
+    localStorage.setItem("users", JSON.stringify(users));
   };
  
   export const isAuthenticate = () => {
-    if (localStorage.getItem("user")) {
-      return JSON.parse(localStorage.getItem("user"));
+    if (localStorage.getItem("users")) {
+      return JSON.parse(localStorage.getItem("users"));
     } else {
       return false;
     }
